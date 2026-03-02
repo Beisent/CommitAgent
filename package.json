@@ -1,0 +1,38 @@
+{
+  "name": "commit-agent",
+  "version": "1.0.0",
+  "description": "使用 AI Agent 自动生成 Git Commit 信息的 CLI 工具",
+  "main": "dist/index.js",
+  "bin": {
+    "commit-agent": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "ai",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.5",
+    "inquirer": "^8.2.6",
+    "node-fetch": "^2.7.0",
+    "ora": "^5.4.1",
+    "simple-git": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.11.19",
+    "@types/node-fetch": "^2.6.13",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}
