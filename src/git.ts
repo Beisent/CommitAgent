@@ -43,4 +43,9 @@ export class GitService {
   async commit(message: string): Promise<void> {
     await this.git.commit(message);
   }
+
+  async getGitDir(): Promise<string> {
+    const result = await this.git.revparse(['--git-dir']);
+    return result.trim();
+  }
 }

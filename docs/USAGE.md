@@ -41,7 +41,27 @@ npm link
 
 ## 使用方法
 
-### 基本使用
+### 方式一：Git 钩子模式（推荐）
+
+安装 Git 钩子后，每次提交时自动生成 commit 信息：
+
+```bash
+# 安装钩子
+commit-agent install
+
+# 正常使用 git
+git add .
+git commit
+# 编辑器会打开，显示 AI 生成的 commit 信息
+# 你可以直接保存、修改或删除
+
+# 卸载钩子
+commit-agent uninstall
+```
+
+详细说明请查看 [Git 钩子使用指南](./HOOK_GUIDE.md)
+
+### 方式二：命令行模式
 
 ```bash
 # 在你的 git 项目中

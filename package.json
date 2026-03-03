@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/cli.ts",
-    "start": "node dist/cli.js"
+    "start": "node dist/cli.js",
+    "postinstall": "echo '\n💡 提示: 运行 commit-agent install 来安装 Git 钩子\n'"
   },
   "keywords": [
     "git",
