@@ -45,7 +45,15 @@ export class GitService {
   }
 
   async getGitDir(): Promise<string> {
+    const path = await import('path');
     const result = await this.git.revparse(['--git-dir']);
-    return result.trim();
+    const gitDir = result.trim();
+
+    // 如果是相对路径，转换为绝对路径
+    if (!path.isAbsolute(gitDir)) {
+      return path.resolve(process.cwd(), gitDir);
+    }
+
+    return gitDir;
   }
 }
